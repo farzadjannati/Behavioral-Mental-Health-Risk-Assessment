@@ -37,68 +37,63 @@ Instead of relying on a single classification algorithm, the framework systemati
 
 ---
 
+
 # Table of Contents
 
 1. [Overview](#-overview)
 
 2. [Machine Learning Pipeline](#-machine-learning-pipeline)
 
-   - Dataset Exploration
-   - Data Preparation
+   - Dataset Preparation
    - Feature Engineering
    - Imbalanced Learning
    - Model Development
+   - Hyperparameter Optimization
    - Model Selection
 
 3. [System Architecture](#system-architecture)
 
 4. [Experimental Workflow](#experimental-workflow)
 
-5. [Model Evaluation](#model-evaluation)
+5. [Model Evaluation](#-model-evaluation)
 
-   - Classification Metrics
-   - ROC Analysis
-   - Feature Importance
-   - Model Comparison
+   - Comparative Performance
+   - Explainability
+   - Experimental Results
 
-6. [Explainability](#explainability)
+6. [Project Structure](#-project-structure)
 
-7. [Project Structure](#-project-structure)
+7. [Installation](#-installation)
 
-8. [Installation](#-installation)
+8. [License](#license)
 
-9. [License](#license)
+9. [Author](#author)
 
-10. [Author](#author)
-
-11. [Support](#-support)
+10. [Support](#-support)
 
 ---
 
 # 📌 Overview
 
-Behavioral mental health assessment is a multidisciplinary problem that requires integrating behavioral indicators, demographic information, and machine learning methodologies into a unified analytical workflow. Rather than treating classification as an isolated task, this project develops a complete predictive modeling pipeline beginning with raw data exploration and ending with interpretable model evaluation.
+Mental health disorders among adolescents have become an increasingly important public health concern, motivating the development of intelligent data-driven approaches capable of identifying behavioral risk patterns at early stages. Machine learning provides an effective framework for discovering complex relationships between behavioral characteristics and mental health outcomes while supporting objective and reproducible decision making.
 
-The proposed workflow emphasizes both predictive performance and transparency. Multiple machine learning algorithms are trained and compared under identical experimental conditions, allowing objective evaluation of their strengths and limitations while highlighting the importance of feature engineering, class imbalance handling, and explainable model interpretation.
+This project implements a complete behavioral mental health analytics pipeline rather than a standalone classification model. Beginning with raw behavioral observations, the workflow performs exploratory data analysis, data preprocessing, feature engineering, imbalance-aware learning, comparative model development, and explainable evaluation before selecting the most reliable predictive model.
 
-The overall framework consists of several sequential stages:
+The framework emphasizes three complementary objectives:
 
-- Comprehensive Exploratory Data Analysis (EDA)
-- Data Cleaning and Preparation
-- Feature Engineering
-- Feature Scaling and Encoding
-- Class Imbalance Mitigation
-- Comparative Machine Learning
-- Hyperparameter Optimization
-- Performance Evaluation
-- Explainable Feature Analysis
-- Final Behavioral Risk Assessment
+- **Predictive Performance** through comparative machine learning and hyperparameter optimization.
+
+- **Model Robustness** through comprehensive preprocessing and imbalance-aware learning.
+
+- **Model Interpretability** through explainable machine learning and feature importance analysis.
+
+Unlike traditional predictive workflows that focus primarily on classification accuracy, this project adopts a comprehensive experimental methodology that prioritizes reproducibility, transparency, and systematic evaluation across multiple machine learning algorithms.
 
 ---
 
 # System Architecture
 
-The proposed framework follows a layered machine learning architecture that systematically transforms raw behavioral observations into interpretable mental health risk predictions. Each layer is responsible for a distinct stage of the analytical workflow, ensuring modularity, reproducibility, and transparency throughout the modeling process.
+The proposed framework follows a layered machine learning architecture that transforms raw behavioral observations into interpretable mental health risk predictions through a sequence of preprocessing, learning, evaluation, and explainability stages. Each layer is designed to ensure reproducibility, modularity, and transparency while enabling objective comparison among multiple predictive models.
 
 ```mermaid
 flowchart TB
@@ -198,33 +193,53 @@ E --> G
 F --> G
 
 G --> H
+
 H --> I
+
 I --> J
+
 J --> K
+
 K --> L
+
 L --> M
 
 M --> N
+
 N --> O
+
 O --> P
 
 P --> Q
+
 P --> R
+
 P --> S
+
 P --> T
+
 P --> U
+
 P --> V
 
 Q --> W
+
 R --> W
+
 S --> W
+
 T --> W
+
 U --> W
+
 V --> W
 
 W --> X
+
 X --> Y
+
 Y --> Z
+
 Z --> AA
 
 AA --> AB
@@ -232,24 +247,13 @@ AA --> AB
 AB --> AC
 ```
 
-### Architectural Components
-
-| Layer | Responsibility |
-|---------|----------------|
-| Data Layer | Behavioral, demographic and lifestyle information collection |
-| Data Processing Layer | Cleaning, preprocessing, encoding, scaling and exploratory analysis |
-| Learning Layer | Class imbalance mitigation and balanced dataset generation |
-| Machine Learning Layer | Comparative training of multiple supervised learning algorithms |
-| Evaluation Layer | Performance comparison using multiple classification metrics |
-| Decision Layer | Selection of the optimal predictive model for behavioral mental health risk assessment |
-
-The layered architecture enables reproducible experimentation, objective model comparison, and interpretable predictive analytics while maintaining a clear separation between data preparation, model development, and evaluation.
+The proposed architecture follows a modular machine learning workflow that separates data preparation, model development, and evaluation into independent layers. This layered design improves reproducibility, facilitates objective comparison across multiple learning algorithms, and enhances model transparency through explainable feature analysis.
 
 ---
 
 # Experimental Workflow
 
-The experimental workflow follows a reproducible machine learning lifecycle that begins with exploratory data analysis and progressively transforms raw behavioral observations into an interpretable predictive model. Each stage is designed to improve data quality, maximize predictive performance, and provide meaningful insights into adolescent mental health risk.
+The complete experimental pipeline follows a reproducible sequence of preprocessing, predictive modeling, and model interpretation, enabling systematic comparison between multiple machine learning algorithms under identical experimental conditions.
 
 ```mermaid
 flowchart LR
@@ -287,288 +291,111 @@ N --> O[Best Model Selection]
 O --> P[Behavioral Mental Health Risk Assessment]
 ```
 
-The workflow emphasizes reproducibility and fair model comparison by applying identical preprocessing and evaluation procedures across all candidate machine learning algorithms.
-
 ---
 
 # Machine Learning Pipeline
 
-The proposed pipeline is designed as a complete predictive analytics framework rather than a standalone classification model. Every processing stage contributes to improving model robustness, reducing bias, and increasing interpretability.
+The project implements a complete predictive analytics workflow that transforms raw behavioral observations into interpretable mental health risk predictions. Every stage contributes to improving data quality, model robustness, predictive performance, and explainability.
 
-## Dataset Exploration
+### Dataset Preparation
 
-The first stage focuses on understanding the behavioral dataset through exploratory data analysis (EDA). Statistical summaries, feature distributions, class distributions, and pairwise relationships are analyzed to identify inconsistencies, potential biases, and informative behavioral patterns before model development begins.
+The raw behavioral dataset undergoes extensive preprocessing before model development. Data quality assessment, categorical encoding, feature scaling, and train-test partitioning ensure that every classifier is trained under identical and reproducible experimental settings.
 
-Primary objectives include:
+### Feature Engineering
 
-- Understanding feature distributions
-- Identifying missing values
-- Detecting outliers
-- Examining class imbalance
-- Investigating feature relationships
-- Understanding target distribution
+Feature engineering improves the predictive representation of behavioral information by transforming raw variables into more informative learning features. Correlation analysis and statistical feature inspection are used to identify redundant attributes and strengthen model performance.
 
----
+### Imbalanced Learning
 
-## Data Preparation
+Behavioral healthcare datasets frequently exhibit skewed class distributions. To mitigate prediction bias toward majority classes, the training data is balanced using SMOTE before model development, resulting in improved minority class recognition and more reliable evaluation.
 
-High-quality preprocessing is essential for reliable predictive modeling. Raw behavioral attributes often contain heterogeneous data types, missing observations, and categorical variables that require transformation before training machine learning models.
+### Model Development
 
-The preprocessing workflow includes:
-
-- Missing value inspection
-- Duplicate removal
-- Data consistency verification
-- Categorical feature encoding
-- Numerical feature normalization
-- Feature scaling
-- Train-test partitioning
-
-These preprocessing operations ensure that every model is trained under consistent and reproducible conditions.
-
----
-
-## Feature Engineering
-
-Feature engineering improves the representation of behavioral information by transforming raw observations into more informative predictive attributes.
-
-The project investigates feature relationships and constructs an optimized feature space through statistical analysis and domain-oriented preprocessing.
-
-Major activities include:
-
-- Behavioral feature transformation
-- Feature normalization
-- Correlation analysis
-- Redundant feature inspection
-- Statistical feature evaluation
-- Predictive feature selection
-
-Careful feature engineering reduces noise while preserving information that contributes to mental health risk prediction.
-
----
-
-## Class Imbalance Handling
-
-Behavioral healthcare datasets frequently exhibit class imbalance, causing machine learning models to favor majority classes and reducing sensitivity toward minority samples.
-
-To mitigate this issue, the pipeline incorporates imbalance-aware learning strategies before model training.
-
-The adopted workflow includes:
-
-- Minority class inspection
-- Distribution analysis
-- Synthetic oversampling
-- Balanced training generation
-- Fair model comparison
-
-Balancing the training data significantly improves recall, F1-score, and overall robustness across multiple classifiers.
-
----
-
-# Model Development
-
-Instead of relying on a single predictive algorithm, the project evaluates multiple supervised machine learning techniques under identical experimental settings.
-
-The comparative framework enables objective assessment of each algorithm's strengths, weaknesses, and generalization capability.
+Instead of relying on a single predictive model, the framework performs a comparative evaluation across multiple supervised learning algorithms.
 
 The evaluated models include:
 
 - Logistic Regression
-- K-Nearest Neighbors
+- K-Nearest Neighbors (KNN)
 - Decision Tree
-- Support Vector Machine
+- Support Vector Machine (SVM)
 - Random Forest
-- XGBoost
+- Extreme Gradient Boosting (XGBoost)
 
-Each classifier is trained using the same preprocessing pipeline and evaluated using identical performance metrics to ensure fair comparison.
-
----
-
-## Hyperparameter Optimization
-
-Model performance is further improved through systematic hyperparameter tuning.
-
-Rather than relying on default configurations, optimized parameters are selected to maximize predictive performance while minimizing overfitting.
-
-Optimization focuses on:
-
-- Tree depth
-- Number of estimators
-- Learning rate
-- Regularization parameters
-- Neighbor selection
-- Kernel configuration
-
-This optimization process increases model stability and improves overall predictive performance.
+Hyperparameter optimization is subsequently applied to improve predictive performance while reducing overfitting and increasing model generalization.
 
 ---
 
-# Model Evaluation
+# 📊 Model Evaluation
 
-Reliable behavioral prediction requires more than overall accuracy. The project therefore evaluates every model using multiple complementary performance metrics.
+The proposed framework evaluates every classifier using multiple complementary performance metrics rather than relying solely on prediction accuracy. This provides a more comprehensive understanding of predictive behavior under imbalanced class distributions.
 
----
-
-## Classification Metrics
-
-Each classifier is assessed using a comprehensive set of evaluation criteria, including:
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- Specificity
-- ROC-AUC
-
-Using multiple metrics provides a more balanced understanding of predictive behavior, particularly under imbalanced class distributions.
-
----
-
-## ROC Analysis
-
-Receiver Operating Characteristic (ROC) analysis measures the discrimination capability of each classifier across different decision thresholds.
-
-The Area Under the ROC Curve (AUC) serves as a threshold-independent indicator of model quality, enabling objective comparison between alternative machine learning algorithms.
-
----
-
-## Comparative Performance Analysis
-
-Performance comparison extends beyond individual metrics by analyzing trade-offs between predictive accuracy, sensitivity, robustness, and computational complexity.
-
-Comparative evaluation highlights:
-
-- Generalization capability
-- Robustness against imbalance
-- Prediction stability
-- False positive behavior
-- False negative behavior
-
-This analysis facilitates selection of the most reliable classifier for behavioral mental health assessment.
-
----
-
-## Feature Importance Analysis
-
-Model interpretability is essential for healthcare-oriented predictive analytics.
-
-Feature importance analysis identifies behavioral variables that contribute most significantly to prediction outcomes, improving both transparency and clinical interpretability.
-
-Different learning algorithms provide complementary perspectives on feature relevance, allowing comparison between model-specific importance estimates and statistical feature evaluation techniques.
-
----
-
-# Explainability
-
-Predictive performance alone is insufficient for trustworthy healthcare applications. The proposed framework therefore incorporates explainability throughout the modeling process to better understand why predictions are generated.
-
-Explainability is investigated through multiple complementary perspectives, including statistical analysis, model-based importance estimation, and comparative interpretation across different learning algorithms.
-
-The explainability workflow focuses on:
-
-- Statistical Feature Ranking
-- Information Gain Analysis
-- Fisher Score Evaluation
-- Decision Tree Importance
-- Random Forest Feature Importance
-- XGBoost Importance Scores
-- Comparative Interpretation Across Models
-
-Rather than treating the predictive model as a black box, the framework provides interpretable evidence regarding which behavioral characteristics contribute most strongly to mental health risk assessment.
-
-The resulting analysis improves transparency, supports reproducible experimentation, and enables more informed interpretation of machine learning predictions within behavioral healthcare applications.
-
----
-
-# Experimental Results
-
-The experimental evaluation demonstrates the effectiveness of a complete machine learning pipeline for behavioral mental health risk assessment. Rather than evaluating models solely based on predictive accuracy, the framework emphasizes robustness, interpretability, and balanced classification performance across multiple complementary evaluation metrics.
-
-The results indicate that appropriate preprocessing, feature engineering, and imbalance-aware learning substantially improve predictive performance while maintaining model transparency.
-
----
-
-## Performance Evaluation
-
-The comparative evaluation investigates each classifier using multiple complementary metrics.
-
-Evaluation criteria include:
+Evaluation focuses on:
 
 - Accuracy
 - Precision
 - Recall
 - F1-Score
 - ROC-AUC
-- Confusion Matrix
-- Cross Validation Performance
+- Cross-Validation
+- Confusion Matrix Analysis
 
-Together, these metrics provide a comprehensive understanding of classifier behavior beyond conventional accuracy-based evaluation.
+Beyond quantitative evaluation, the framework also investigates feature importance to better understand how behavioral indicators contribute to model predictions and to improve overall model transparency.
 
 ---
 
-## Visual Results
+# 📈 Experimental Results
 
-The following visualizations summarize the most important findings obtained throughout the experimental analysis.
+The notebook contains several visual analyses illustrating different stages of the experimental pipeline. Instead of presenting isolated performance numbers, the following visualizations summarize the most important findings obtained throughout the study.
 
-### Correlation Analysis
+## Comparative Model Performance
 
 <p align="center">
 
-<img src="figures/correlation_heatmap.png" width="700"/>
+<!-- Replace with the comparison figure generated in the notebook -->
+
+<img src="figures/model_comparison.png" width="760"/>
 
 </p>
 
-The correlation heatmap illustrates relationships among behavioral variables and assists in identifying redundant information, feature dependencies, and potentially informative predictors before model training.
+Performance comparison across all evaluated classifiers demonstrates the impact of preprocessing, imbalance-aware learning, and hyperparameter optimization on predictive accuracy and overall model robustness.
 
 ---
 
-### ROC Curve Comparison
+## Confusion Matrix
 
 <p align="center">
 
-<img src="figures/roc_curve.png" width="700"/>
+<!-- Replace with the best-performing model confusion matrix -->
+
+<img src="figures/confusion_matrix.png" width="560"/>
 
 </p>
 
-Receiver Operating Characteristic (ROC) curves compare the discrimination capability of different machine learning models across multiple classification thresholds. Higher AUC values indicate stronger predictive performance and better class separability.
+The confusion matrix provides a detailed view of prediction outcomes and enables analysis of correctly and incorrectly classified samples beyond aggregate evaluation metrics.
 
 ---
 
-### Confusion Matrix
+## Feature Importance
 
 <p align="center">
 
-<img src="figures/confusion_matrix.png" width="600"/>
+<!-- Replace with the notebook feature importance figure -->
+
+<img src="figures/feature_importance.png" width="760"/>
 
 </p>
 
-The confusion matrix provides a detailed view of prediction outcomes, enabling analysis of correctly classified instances as well as false positives and false negatives that are particularly important in healthcare-oriented predictive tasks.
+Feature importance analysis improves interpretability by identifying the behavioral variables that contribute most significantly to mental health risk prediction, providing valuable insight into the decision-making process of the selected model.
 
 ---
 
-### Feature Importance
-
-<p align="center">
-
-<img src="figures/feature_importance.png" width="700"/>
-
-</p>
-
-Feature importance analysis highlights the behavioral variables that contribute most significantly to the predictive models, improving model interpretability and supporting transparent decision making.
-
----
-
-# Discussion
-
-The experimental findings demonstrate that behavioral characteristics extracted from adolescent social media and lifestyle data contain meaningful predictive information for mental health risk assessment.
-
-Beyond predictive accuracy, the project emphasizes reproducible experimentation, balanced learning, and explainable artificial intelligence. The comparative evaluation further illustrates that no single classifier is universally optimal; instead, model selection should consider predictive performance, interpretability, robustness, and computational efficiency simultaneously.
-
-The resulting framework provides a complete machine learning workflow suitable for educational, research, and applied predictive analytics scenarios.
 
 ---
 
 # 📁 Project Structure
+
+The repository is organized to ensure clarity, reproducibility, and ease of navigation across different components of the machine learning pipeline.
 
 ```text
 Behavioral-Mental-Health-Risk-Assessment
@@ -579,10 +406,10 @@ Behavioral-Mental-Health-Risk-Assessment
 │   └── teen_behavior_dataset.csv
 │
 ├── figures/
-│   ├── correlation_heatmap.png
-│   ├── roc_curve.png
+│   ├── model_comparison.png
 │   ├── confusion_matrix.png
-│   └── feature_importance.png
+│   ├── feature_importance.png
+│   └── correlation_heatmap.png
 │
 ├── requirements.txt
 │
@@ -593,7 +420,9 @@ Behavioral-Mental-Health-Risk-Assessment
 
 # 🚀 Installation
 
-## Clone Repository
+The following steps outline how to set up and run the project locally.
+
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/farzadjannati/Behavioral-Mental-Health-Risk-Assessment.git
@@ -601,7 +430,9 @@ git clone https://github.com/farzadjannati/Behavioral-Mental-Health-Risk-Assessm
 cd Behavioral-Mental-Health-Risk-Assessment
 ```
 
-## Create Environment
+---
+
+## 2. Create Virtual Environment
 
 ```bash
 conda create -n mental-health python=3.10
@@ -609,84 +440,82 @@ conda create -n mental-health python=3.10
 conda activate mental-health
 ```
 
-## Install Dependencies
+---
+
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Launch Jupyter Notebook
+---
+
+## 4. Run Notebook
+
+Launch Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
 
-Open
+Then open:
 
 ```text
 behavioral_mental_health.ipynb
 ```
 
-and execute all notebook cells sequentially.
+Execute all cells sequentially to reproduce the full machine learning pipeline.
 
 ---
 
-# Requirements
+# 📊 Final Insights
 
-Main dependencies include:
+The experimental results demonstrate that behavioral signals extracted from adolescent social media and lifestyle data contain meaningful predictive patterns for mental health risk assessment.
 
-- Python 3.10+
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-Learn
-- XGBoost
-- Imbalanced-Learn
-- Jupyter Notebook
+Key observations include:
+
+- Machine learning models benefit significantly from proper preprocessing and feature engineering.
+- Class imbalance handling improves sensitivity toward minority classes.
+- Ensemble models such as Random Forest and XGBoost consistently outperform baseline classifiers.
+- Explainability techniques enhance interpretability and trust in predictive outcomes.
+- Comparative evaluation is essential for selecting robust and generalizable models.
 
 ---
 
-# License
-
-This project is licensed under the MIT License.
-
----
-
-# Author
+# 👨‍💻 Author
 
 **Farzad Jannati**
 
-M.Sc. Student, University of Tehran
+M.Sc. Student – University of Tehran  
+Research Assistant – Social Networks Lab  
 
-Research Interests:
-
+### Research Interests:
 - Machine Learning
 - Data Mining
+- Behavioral Analytics
+- Explainable AI (XAI)
 - Large Language Models (LLMs)
-- Retrieval-Augmented Generation (RAG)
-- Agentic AI
-- Information Retrieval
-- Explainable Artificial Intelligence
 
-📧 **farzadjannati@ut.ac.ir**
-
-💻 **https://github.com/farzadjannati**
-
-💼 **https://linkedin.com/in/farzadjannati**
+📧 Email: farzadjannati@ut.ac.ir  
+💻 GitHub: https://github.com/farzadjannati  
+💼 LinkedIn: https://linkedin.com/in/farzadjannati  
 
 ---
 
 # ⭐ Support
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
+If you find this project useful, consider giving it a star ⭐ on GitHub.
 
-Your support helps increase the visibility of the project and encourages future open-source research and development.
+Your support helps improve visibility of open-source research projects and encourages further development in machine learning for healthcare applications.
 
 ---
 
+# 📌 Footer
+
 <p align="center">
 
-Built with ❤️ using Python, Scikit-Learn, XGBoost, Pandas, NumPy and Explainable Machine Learning
+Built with ❤️ using Python, Pandas, Scikit-Learn
 
 </p>
+
+---
