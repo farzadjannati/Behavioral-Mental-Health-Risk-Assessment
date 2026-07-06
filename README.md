@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F766E,50:14B8A6,100:2563EB&height=220&section=header&text=Behavioral%20Mental%20Health%20Risk%20Assessment&fontSize=34&fontColor=ffffff&fontAlignY=50&animation=fadeIn"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2193B0,100:6DD5ED&height=220&section=header&text=Behavioral%20Mental%20Health%20Risk%20Assessment&fontSize=34&fontColor=ffffff&fontAlignY=50&animation=fadeIn"/>
 
 </div>
 
@@ -42,10 +42,11 @@ Instead of relying on a single classification algorithm, the framework systemati
 1. [Overview](#-overview)
 2. [System Architecture](#system-architecture)
 3. [Experimental Workflow](#experimental-workflow)
-4. [Project Structure](#-project-structure)
-5. [Installation](#-installation)
-6. [Author](#author)
-7. [Support](#support)
+4. [Machine Learning Pipeline & Model Evaluation](#machine-learning-pipeline--model-evaluation)
+5. [Project Structure](#-project-structure)
+6. [Installation](#-installation)
+7. [Author](#author)
+8. [Support](#support)
 
 ---
 
@@ -267,6 +268,35 @@ O --> P[Behavioral Mental Health Risk Assessment]
 
 ---
 
+# Machine Learning Pipeline & 📊 Model Evaluation
+
+The pipeline features robust data preprocessing, SMOTETomek oversampling to handle class imbalance, and systematic training of multiple classifiers (including Random Forest and XGBoost). Model evaluation goes beyond standard accuracy by focusing on **clinical recall**, combined **ROC-AUC** analysis, and robust **feature interpretability** using Fisher Score and Information Gain. 
+
+Below are the visual results of our comparative experimental evaluation:
+
+<div align="center">
+
+### 1. Comparative Performance Metrics
+<img src="images/metrics_comparison.png" width="850" alt="Comparative Performance Metrics"/>
+<br>
+<em>Comparison of Accuracy, Precision, Recall, F1-Score, and AUC across multiple machine learning models.</em>
+<br><br>
+
+### 2. ROC-AUC Analysis
+<img src="images/roc_curve.png" width="700" alt="ROC Curve Analysis"/>
+<br>
+<em>Receiver Operating Characteristic (ROC) curves highlighting the superiority of ensemble models.</em>
+<br><br>
+
+### 3. Feature Importance Analysis
+<img src="images/feature_importance.png" width="750" alt="Normalized Feature Importance Heatmap"/>
+<br>
+<em>Normalized feature importance showing Sleep Hours, Stress Level, and Daily Social Media Hours as top predictors.</em>
+
+</div>
+
+---
+
 # 📁 Project Structure
 
 The repository is organized to ensure clarity, reproducibility, and ease of navigation across different components of the machine learning pipeline.
@@ -278,6 +308,11 @@ Behavioral-Mental-Health-Risk-Assessment
 │
 ├── dataset/
 │   └── teen_behavior_dataset.csv
+│
+├── images/
+│   ├── metrics_comparison.png
+│   ├── roc_curve.png
+│   └── feature_importance.png
 │
 ├── requirements.txt
 │
@@ -340,7 +375,7 @@ Execute all cells sequentially to reproduce the full machine learning pipeline.
 
 **Farzad Jannati**
 
-M.Sc. Student, University of Tehran | Research Assistant @ Social Networks Lab 
+M.Sc. Student, University of Tehran Research Assistant @ Social Networks Lab 
 
 **Research Interests:** ML, Data Mining, Behavioral Analytics, Explainable AI (XAI) 
 
@@ -357,7 +392,5 @@ Your support helps improve visibility of open-source research projects and encou
 ---
 
 <p align="center">
-
 Built with ❤️ using Python, Pandas, Scikit-Learn
-
 </p>
