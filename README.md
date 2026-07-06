@@ -41,34 +41,20 @@ Instead of relying on a single classification algorithm, the framework systemati
 # Table of Contents
 
 1. [Overview](#-overview)
-
 2. [Machine Learning Pipeline](#-machine-learning-pipeline)
-
    - Dataset Preparation
    - Feature Engineering
    - Imbalanced Learning
    - Model Development
    - Hyperparameter Optimization
    - Model Selection
-
 3. [System Architecture](#system-architecture)
-
 4. [Experimental Workflow](#experimental-workflow)
-
 5. [Model Evaluation](#-model-evaluation)
-
-   - Comparative Performance
-   - Explainability
-   - Experimental Results
-
 6. [Project Structure](#-project-structure)
-
 7. [Installation](#-installation)
-
 8. [License](#license)
-
 9. [Author](#author)
-
 10. [Support](#-support)
 
 ---
@@ -82,9 +68,7 @@ This project implements a complete behavioral mental health analytics pipeline r
 The framework emphasizes three complementary objectives:
 
 - **Predictive Performance** through comparative machine learning and hyperparameter optimization.
-
 - **Model Robustness** through comprehensive preprocessing and imbalance-aware learning.
-
 - **Model Interpretability** through explainable machine learning and feature importance analysis.
 
 Unlike traditional predictive workflows that focus primarily on classification accuracy, this project adopts a comprehensive experimental methodology that prioritizes reproducibility, transparency, and systematic evaluation across multiple machine learning algorithms.
@@ -297,19 +281,19 @@ O --> P[Behavioral Mental Health Risk Assessment]
 
 The project implements a complete predictive analytics workflow that transforms raw behavioral observations into interpretable mental health risk predictions. Every stage contributes to improving data quality, model robustness, predictive performance, and explainability.
 
-### Dataset Preparation
+## Dataset Preparation
 
 The raw behavioral dataset undergoes extensive preprocessing before model development. Data quality assessment, categorical encoding, feature scaling, and train-test partitioning ensure that every classifier is trained under identical and reproducible experimental settings.
 
-### Feature Engineering
+## Feature Engineering
 
 Feature engineering improves the predictive representation of behavioral information by transforming raw variables into more informative learning features. Correlation analysis and statistical feature inspection are used to identify redundant attributes and strengthen model performance.
 
-### Imbalanced Learning
+## Imbalanced Learning
 
 Behavioral healthcare datasets frequently exhibit skewed class distributions. To mitigate prediction bias toward majority classes, the training data is balanced using SMOTE before model development, resulting in improved minority class recognition and more reliable evaluation.
 
-### Model Development
+## Model Development
 
 Instead of relying on a single predictive model, the framework performs a comparative evaluation across multiple supervised learning algorithms.
 
@@ -344,55 +328,6 @@ Beyond quantitative evaluation, the framework also investigates feature importan
 
 ---
 
-# 📈 Experimental Results
-
-The notebook contains several visual analyses illustrating different stages of the experimental pipeline. Instead of presenting isolated performance numbers, the following visualizations summarize the most important findings obtained throughout the study.
-
-## Comparative Model Performance
-
-<p align="center">
-
-<!-- Replace with the comparison figure generated in the notebook -->
-
-<img src="figures/model_comparison.png" width="760"/>
-
-</p>
-
-Performance comparison across all evaluated classifiers demonstrates the impact of preprocessing, imbalance-aware learning, and hyperparameter optimization on predictive accuracy and overall model robustness.
-
----
-
-## Confusion Matrix
-
-<p align="center">
-
-<!-- Replace with the best-performing model confusion matrix -->
-
-<img src="figures/confusion_matrix.png" width="560"/>
-
-</p>
-
-The confusion matrix provides a detailed view of prediction outcomes and enables analysis of correctly and incorrectly classified samples beyond aggregate evaluation metrics.
-
----
-
-## Feature Importance
-
-<p align="center">
-
-<!-- Replace with the notebook feature importance figure -->
-
-<img src="figures/feature_importance.png" width="760"/>
-
-</p>
-
-Feature importance analysis improves interpretability by identifying the behavioral variables that contribute most significantly to mental health risk prediction, providing valuable insight into the decision-making process of the selected model.
-
----
-
-
----
-
 # 📁 Project Structure
 
 The repository is organized to ensure clarity, reproducibility, and ease of navigation across different components of the machine learning pipeline.
@@ -404,12 +339,6 @@ Behavioral-Mental-Health-Risk-Assessment
 │
 ├── dataset/
 │   └── teen_behavior_dataset.csv
-│
-├── figures/
-│   ├── model_comparison.png
-│   ├── confusion_matrix.png
-│   ├── feature_importance.png
-│   └── correlation_heatmap.png
 │
 ├── requirements.txt
 │
@@ -468,23 +397,11 @@ Execute all cells sequentially to reproduce the full machine learning pipeline.
 
 ---
 
-# 👨‍💻 Author
-
+# Author 
 **Farzad Jannati**
-
-M.Sc. Student – University of Tehran  
-Research Assistant – Social Networks Lab  
-
-### Research Interests:
-- Machine Learning
-- Data Mining
-- Behavioral Analytics
-- Explainable AI (XAI)
-- Large Language Models (LLMs)
-
-📧 Email: farzadjannati@ut.ac.ir  
-💻 GitHub: https://github.com/farzadjannati  
-💼 LinkedIn: https://linkedin.com/in/farzadjannati  
+M.Sc. Student, University of Tehran Research Assistant @ Social Networks Lab 
+**Research Interests:** ML, Data Mining, Agentic AI, Behavioral Analytics, Explainable AI (XAI) 
+📧 [farzadjannati@ut.ac.ir](mailto:farzadjannati@ut.ac.ir) | 💻 [github.com/farzadjannati](https://github.com/farzadjannati) | 💼 [linkedin.com/in/farzadjannati](https://www.linkedin.com/in/farzadjannati) 
 
 ---
 
@@ -505,3 +422,4 @@ Built with ❤️ using Python, Pandas, Scikit-Learn
 </p>
 
 ---
+```
