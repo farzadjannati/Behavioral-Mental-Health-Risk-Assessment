@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:43e97b,100:38f9d7&height=220&section=header&text=Behavioral%20Mental%20Health%20Risk%20Assessment&fontSize=34&fontColor=ffffff&fontAlignY=50&animation=fadeIn"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:a18cd1,100:fbc2eb&height=220&section=header&text=Behavioral%20Mental%20Health%20Risk%20Assessment&fontSize=34&fontColor=ffffff&fontAlignY=50&animation=fadeIn"/>
 </div>
 
 ---
