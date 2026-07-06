@@ -468,20 +468,6 @@ Execute all cells sequentially to reproduce the full machine learning pipeline.
 
 ---
 
-# 📊 Final Insights
-
-The experimental results demonstrate that behavioral signals extracted from adolescent social media and lifestyle data contain meaningful predictive patterns for mental health risk assessment.
-
-Key observations include:
-
-- Machine learning models benefit significantly from proper preprocessing and feature engineering.
-- Class imbalance handling improves sensitivity toward minority classes.
-- Ensemble models such as Random Forest and XGBoost consistently outperform baseline classifiers.
-- Explainability techniques enhance interpretability and trust in predictive outcomes.
-- Comparative evaluation is essential for selecting robust and generalizable models.
-
----
-
 # 👨‍💻 Author
 
 **Farzad Jannati**
