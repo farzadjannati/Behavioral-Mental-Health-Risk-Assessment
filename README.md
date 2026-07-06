@@ -268,30 +268,32 @@ O --> P[Behavioral Mental Health Risk Assessment]
 
 ---
 
-# Machine Learning Pipeline & Model Evaluation
 
-The pipeline features robust data preprocessing, SMOTETomek oversampling to handle class imbalance, and systematic training of multiple classifiers (including Random Forest and XGBoost). Model evaluation goes beyond standard accuracy by focusing on **clinical recall**, combined **ROC-AUC** analysis, and robust **feature interpretability** using Fisher Score and Information Gain. 
+# ⚙️ Machine Learning Pipeline & Evaluation
 
-Below are the visual results of our comparative experimental evaluation:
+The predictive analytics workflow processes a robust dataset of 1,200 adolescent records, utilizing synthetic oversampling (**SMOTETomek**) to effectively resolve class imbalance in the depression indicators. The pipeline systematically trains and evaluates baseline algorithms (Logistic Regression, KNN, Decision Trees) alongside advanced ensemble models (SVM, Random Forest, and **XGBoost** with rigorous hyperparameter tuning). Model evaluation extends beyond standard accuracy, prioritizing clinical reliability through combined **ROC-AUC curve analysis**, bias-variance trade-off tracking (via `max_depth` adjustments), and threshold moving for optimal recall. Finally, feature interpretability is established using filter methods (Fisher Score and Information Gain), ensuring transparent and data-driven insights into how social media and lifestyle behaviors impact mental health risks.
+
+<br>
+
+### Visual Analytics & Results
 
 <div align="center">
 
-### 1. Comparative Performance Metrics
+<h4>1. Comparative Performance Metrics</h4>
 <img src="images/model_comparison.png" width="850" alt="Comparative Performance Metrics"/>
-<br>
-<em>Comparison of Accuracy, Precision, Recall, F1-Score, and AUC across multiple machine learning models.</em>
-<br><br>
+<p><em>Comparison of Accuracy, Precision, Recall, F1-Score, and AUC across multiple machine learning models.</em></p>
 
-### 2. ROC-AUC Analysis
+<br>
+
+<h4>2. ROC-AUC Analysis</h4>
 <img src="images/roc_curves.png" width="700" alt="ROC Curve Analysis"/>
-<br>
-<em>Receiver Operating Characteristic (ROC) curves highlighting the superiority of ensemble models.</em>
-<br><br>
+<p><em>Receiver Operating Characteristic (ROC) curves highlighting the superiority of ensemble models.</em></p>
 
-### 3. Feature Importance Analysis
-<img src="images/feature_importance.png" width="750" alt="Normalized Feature Importance Heatmap"/>
 <br>
-<em>Normalized feature importance showing Sleep Hours, Stress Level, and Daily Social Media Hours as top predictors.</em>
+
+<h4>3. Feature Importance Analysis</h4>
+<img src="images/feature_importance.png" width="750" alt="Normalized Feature Importance Heatmap"/>
+<p><em>Normalized feature importance showing Sleep Hours, Stress Level, and Daily Social Media Hours as top predictors.</em></p>
 
 </div>
 
