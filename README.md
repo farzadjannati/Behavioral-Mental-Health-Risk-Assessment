@@ -268,34 +268,35 @@ O --> P[Behavioral Mental Health Risk Assessment]
 
 ---
 
+---
 
-# ⚙️ Machine Learning Pipeline & Evaluation
+# Machine Learning Pipeline & Model Evaluation
 
-The predictive analytics workflow processes a robust dataset of 1,200 adolescent records, utilizing synthetic oversampling (**SMOTETomek**) to effectively resolve class imbalance in the depression indicators. The pipeline systematically trains and evaluates baseline algorithms (Logistic Regression, KNN, Decision Trees) alongside advanced ensemble models (SVM, Random Forest, and **XGBoost** with rigorous hyperparameter tuning). Model evaluation extends beyond standard accuracy, prioritizing clinical reliability through combined **ROC-AUC curve analysis**, bias-variance trade-off tracking (via `max_depth` adjustments), and threshold moving for optimal recall. Finally, feature interpretability is established using filter methods (Fisher Score and Information Gain), ensuring transparent and data-driven insights into how social media and lifestyle behaviors impact mental health risks.
+The project implements a complete predictive analytics workflow that transforms raw behavioral observations into interpretable mental health risk predictions. Every stage is meticulously designed to improve data quality, model robustness, predictive performance, and explainability.
 
-<br>
+### Dataset Preparation & Feature Engineering
+The raw behavioral dataset undergoes extensive preprocessing before model development. Data quality assessment, categorical encoding, feature scaling, and stratified train-test partitioning ensure that every classifier is trained under identical and reproducible experimental settings. Furthermore, feature engineering improves the predictive representation by transforming raw variables into more informative learning features. Correlation analysis and statistical feature inspection are utilized to identify redundant attributes and strengthen model performance.
 
-### Visual Analytics & Results
+### Imbalanced Learning
+Behavioral healthcare datasets frequently exhibit skewed class distributions. To mitigate prediction bias toward majority classes, the training data is synthetically balanced using **SMOTETomek** before model development. This crucial step results in improved minority class recognition and more reliable clinical evaluation.
 
-<div align="center">
+### Comparative Model Development
+Instead of relying on a single predictive model, the framework performs a comprehensive comparative evaluation across multiple supervised learning algorithms. The evaluated models include:
 
-<h4>1. Comparative Performance Metrics</h4>
-<img src="images/model_comparison.png" width="850" alt="Comparative Performance Metrics"/>
-<p><em>Comparison of Accuracy, Precision, Recall, F1-Score, and AUC across multiple machine learning models.</em></p>
+- **Baseline Models:** Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree
+- **Ensemble & Advanced Models:** Support Vector Machine (SVM), Random Forest, Extreme Gradient Boosting (**XGBoost**)
 
-<br>
+Rigorous hyperparameter optimization is subsequently applied to improve predictive performance while reducing overfitting and increasing model generalization.
 
-<h4>2. ROC-AUC Analysis</h4>
-<img src="images/roc_curves.png" width="700" alt="ROC Curve Analysis"/>
-<p><em>Receiver Operating Characteristic (ROC) curves highlighting the superiority of ensemble models.</em></p>
+### Comprehensive Evaluation & Explainability
+The proposed framework evaluates every classifier using multiple complementary performance metrics rather than relying solely on prediction accuracy. This provides a deep understanding of predictive behavior under imbalanced class distributions. 
 
-<br>
+The evaluation methodology focuses on:
+- **Standard Metrics:** Accuracy, Precision, Recall, and F1-Score
+- **Advanced Analysis:** ROC-AUC Curve Analysis and Threshold Moving for optimal clinical recall
+- **Validation:** Cross-Validation and Confusion Matrix Evaluation
 
-<h4>3. Feature Importance Analysis</h4>
-<img src="images/feature_importance.png" width="750" alt="Normalized Feature Importance Heatmap"/>
-<p><em>Normalized feature importance showing Sleep Hours, Stress Level, and Daily Social Media Hours as top predictors.</em></p>
-
-</div>
+Beyond quantitative evaluation, the framework integrates Explainable AI (XAI) techniques. By investigating **Feature Importance** (using methods like Fisher Score and Information Gain), the pipeline uncovers how specific behavioral indicators—such as sleep hours, stress levels, and social media usage—directly contribute to mental health risk predictions, thereby maximizing overall model transparency.
 
 ---
 
