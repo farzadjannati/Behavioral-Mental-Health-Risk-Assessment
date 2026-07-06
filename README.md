@@ -37,25 +37,15 @@ Instead of relying on a single classification algorithm, the framework systemati
 
 ---
 
-
 # Table of Contents
 
 1. [Overview](#-overview)
-2. [Machine Learning Pipeline](#-machine-learning-pipeline)
-   - Dataset Preparation
-   - Feature Engineering
-   - Imbalanced Learning
-   - Model Development
-   - Hyperparameter Optimization
-   - Model Selection
-3. [System Architecture](#system-architecture)
-4. [Experimental Workflow](#experimental-workflow)
-5. [Model Evaluation](#-model-evaluation)
-6. [Project Structure](#-project-structure)
-7. [Installation](#-installation)
-8. [License](#license)
-9. [Author](#author)
-10. [Support](#-support)
+2. [System Architecture](#system-architecture)
+3. [Experimental Workflow](#experimental-workflow)
+4. [Project Structure](#-project-structure)
+5. [Installation](#-installation)
+6. [Author](#author)
+7. [Support](#support)
 
 ---
 
@@ -277,57 +267,6 @@ O --> P[Behavioral Mental Health Risk Assessment]
 
 ---
 
-# Machine Learning Pipeline
-
-The project implements a complete predictive analytics workflow that transforms raw behavioral observations into interpretable mental health risk predictions. Every stage contributes to improving data quality, model robustness, predictive performance, and explainability.
-
-## Dataset Preparation
-
-The raw behavioral dataset undergoes extensive preprocessing before model development. Data quality assessment, categorical encoding, feature scaling, and train-test partitioning ensure that every classifier is trained under identical and reproducible experimental settings.
-
-## Feature Engineering
-
-Feature engineering improves the predictive representation of behavioral information by transforming raw variables into more informative learning features. Correlation analysis and statistical feature inspection are used to identify redundant attributes and strengthen model performance.
-
-## Imbalanced Learning
-
-Behavioral healthcare datasets frequently exhibit skewed class distributions. To mitigate prediction bias toward majority classes, the training data is balanced using SMOTE before model development, resulting in improved minority class recognition and more reliable evaluation.
-
-## Model Development
-
-Instead of relying on a single predictive model, the framework performs a comparative evaluation across multiple supervised learning algorithms.
-
-The evaluated models include:
-
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Decision Tree
-- Support Vector Machine (SVM)
-- Random Forest
-- Extreme Gradient Boosting (XGBoost)
-
-Hyperparameter optimization is subsequently applied to improve predictive performance while reducing overfitting and increasing model generalization.
-
----
-
-# 📊 Model Evaluation
-
-The proposed framework evaluates every classifier using multiple complementary performance metrics rather than relying solely on prediction accuracy. This provides a more comprehensive understanding of predictive behavior under imbalanced class distributions.
-
-Evaluation focuses on:
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
-- Cross-Validation
-- Confusion Matrix Analysis
-
-Beyond quantitative evaluation, the framework also investigates feature importance to better understand how behavioral indicators contribute to model predictions and to improve overall model transparency.
-
----
-
 # 📁 Project Structure
 
 The repository is organized to ensure clarity, reproducibility, and ease of navigation across different components of the machine learning pipeline.
@@ -398,14 +337,18 @@ Execute all cells sequentially to reproduce the full machine learning pipeline.
 ---
 
 # Author 
+
 **Farzad Jannati**
-M.Sc. Student, University of Tehran Research Assistant @ Social Networks Lab 
-**Research Interests:** ML, Data Mining, Agentic AI, Behavioral Analytics, Explainable AI (XAI) 
+
+M.Sc. Student, University of Tehran | Research Assistant @ Social Networks Lab 
+
+**Research Interests:** ML, Data Mining, Behavioral Analytics, Explainable AI (XAI) 
+
 📧 [farzadjannati@ut.ac.ir](mailto:farzadjannati@ut.ac.ir) | 💻 [github.com/farzadjannati](https://github.com/farzadjannati) | 💼 [linkedin.com/in/farzadjannati](https://www.linkedin.com/in/farzadjannati) 
 
 ---
 
-# ⭐ Support
+# Support
 
 If you find this project useful, consider giving it a star ⭐ on GitHub.
 
@@ -413,13 +356,8 @@ Your support helps improve visibility of open-source research projects and encou
 
 ---
 
-# 📌 Footer
-
 <p align="center">
 
 Built with ❤️ using Python, Pandas, Scikit-Learn
 
 </p>
-
----
-```
