@@ -277,13 +277,13 @@ Below are the visual results of our comparative experimental evaluation:
 <div align="center">
 
 ### 1. Comparative Performance Metrics
-<img src="images/metrics_comparison.png" width="850" alt="Comparative Performance Metrics"/>
+<img src="images/model_comparison.png" width="850" alt="Comparative Performance Metrics"/>
 <br>
 <em>Comparison of Accuracy, Precision, Recall, F1-Score, and AUC across multiple machine learning models.</em>
 <br><br>
 
 ### 2. ROC-AUC Analysis
-<img src="images/roc_curve.png" width="700" alt="ROC Curve Analysis"/>
+<img src="images/roc_curves.png" width="700" alt="ROC Curve Analysis"/>
 <br>
 <em>Receiver Operating Characteristic (ROC) curves highlighting the superiority of ensemble models.</em>
 <br><br>
