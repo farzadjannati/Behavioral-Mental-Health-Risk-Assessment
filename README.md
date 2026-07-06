@@ -268,7 +268,7 @@ O --> P[Behavioral Mental Health Risk Assessment]
 
 ---
 
-# Machine Learning Pipeline & 📊 Model Evaluation
+# Machine Learning Pipeline & Model Evaluation
 
 The pipeline features robust data preprocessing, SMOTETomek oversampling to handle class imbalance, and systematic training of multiple classifiers (including Random Forest and XGBoost). Model evaluation goes beyond standard accuracy by focusing on **clinical recall**, combined **ROC-AUC** analysis, and robust **feature interpretability** using Fisher Score and Information Gain. 
 
